@@ -1,7 +1,7 @@
 /**
  *  LeetCode: 53. Maximum Subarray (Easy)
  *
- *      Given an integer array nums, find the continuous subarray (containing at least one number) which has the largest sum and return its sum.
+ *      Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
  *
  *      Follow up:
  *
@@ -24,7 +24,7 @@ public:
 
         /**
          *  Think:  
-         *      How to "add/make" the maximum sum from the continuous subarray? What situation will the subarray have?
+         *      How to "add/make" the maximum sum from the contiguous subarray? What situation will the subarray have?
          *  
          *      add each element and check two situation.
          */
