@@ -11,7 +11,7 @@ public:
 
         /* building graph --- adjacency list */
         for (size_t i = 0; i < prerequisites.size(); ++i)
-            table[prerequisites[i][0]].push_back(prerequisites[i][1]);
+            table[prerequisites[i][1]].push_back(prerequisites[i][0]);
 
         /* DFS checking */
         for (int i = 0; i < numCourses; ++i) {
