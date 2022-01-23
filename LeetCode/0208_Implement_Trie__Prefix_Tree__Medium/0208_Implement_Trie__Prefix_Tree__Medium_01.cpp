@@ -18,13 +18,13 @@ public:
             ptr = ptr->nodes[c-'a'];
         }
 
-        ptr->eof = true;
+        ptr->eol = true;
     }
 
     bool search(string word) {
         const struct TrieNode *ptr = find(word);
 
-        return (ptr && ptr->eof);
+        return (ptr && ptr->eol);
     }
 
     bool startsWith(string prefix) {
@@ -32,7 +32,7 @@ public:
     }
 private:
     struct TrieNode {
-        TrieNode():eof(false), nodes(26, nullptr){}
+        TrieNode():eol(false), nodes(26, nullptr){}
         ~TrieNode() {
             for (struct Trieode *node : nodes)
                 if (node)
@@ -40,7 +40,7 @@ private:
         }
 
         vector<struct TrieNode*> nodes;
-        bool eof;
+        bool eol;
     };
 
     struct TrieNode* find(const string &word) const {
@@ -63,4 +63,5 @@ private:
  * obj->insert(word);
  * bool param_2 = obj->search(word);
  * bool param_3 = obj->startsWith(prefix);
- */N
+ */
+
